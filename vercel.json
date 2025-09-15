@@ -2,14 +2,33 @@
   "version": 2,
   "builds": [
     {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    },
+    {
       "src": "server/simple-server.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/api/(.*)",
       "dest": "server/simple-server.js"
+    },
+    {
+      "src": "/test",
+      "dest": "server/simple-server.js"
+    },
+    {
+      "src": "/plaid/(.*)",
+      "dest": "server/simple-server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
