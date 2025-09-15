@@ -1,0 +1,175 @@
+.onboarding {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.onboarding-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.onboarding-step {
+  text-align: center;
+  max-width: 400px;
+}
+
+.onboarding-step h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 16px 0;
+}
+
+.onboarding-step p {
+  font-size: 16px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.onboarding-actions {
+  padding: 20px 0;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.action-button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  flex: 1;
+}
+
+.action-button.primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.action-button.primary:hover {
+  background: #2563eb;
+}
+
+.action-button.secondary {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.action-button.secondary:hover {
+  background: #e5e7eb;
+}
+
+.hint-box {
+  background: #f0f9ff;
+  border: 1px solid #0ea5e9;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  text-align: left;
+}
+
+.hint-box p {
+  margin: 0 0 12px 0;
+  color: #0c4a6e;
+  font-size: 14px;
+}
+
+.auto-select-button {
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.auto-select-button:hover {
+  background: #0284c7;
+}
+
+.connect-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.connect-button {
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  text-align: center;
+}
+
+.connect-button.primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.connect-button.primary:hover {
+  background: #2563eb;
+}
+
+.connect-button.secondary {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.connect-button.secondary:hover {
+  background: #e5e7eb;
+}
+
+.connect-disclaimer {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 16px 0;
+  text-align: center;
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  .onboarding {
+    padding: 16px 12px;
+  }
+  
+  .onboarding-step h1 {
+    font-size: 24px;
+  }
+  
+  .onboarding-step p {
+    font-size: 15px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .action-button {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+}

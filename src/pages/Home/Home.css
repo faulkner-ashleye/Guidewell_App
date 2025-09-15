@@ -1,0 +1,111 @@
+.home {
+  padding: 20px 16px 100px 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.greeting {
+  margin-bottom: 32px;
+}
+
+.greeting h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.snapshot-summary {
+  margin-bottom: 32px;
+}
+
+.snapshot-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.snapshot-item:last-child {
+  border-bottom: none;
+}
+
+.snapshot-label {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.snapshot-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.quick-nudge {
+  text-align: center;
+}
+
+.quick-nudge h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 20px 0;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cta-button {
+  display: block;
+  padding: 16px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button.primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.cta-button.primary:hover {
+  background: #2563eb;
+}
+
+.cta-button.secondary {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.cta-button.secondary:hover {
+  background: #e5e7eb;
+}
+
+@media (max-width: 480px) {
+  .home {
+    padding: 16px 12px 100px 12px;
+  }
+  
+  .greeting h1 {
+    font-size: 20px;
+  }
+  
+  .cta-button {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+}
+
+
+
