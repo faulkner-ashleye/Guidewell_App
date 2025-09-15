@@ -4,14 +4,8 @@
   "private": true,
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
-    "@types/node": "^16.18.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.2",
-    "express": "^4.18.2",
-    "node-fetch": "^3.3.2",
-    "plaid": "^38.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-plaid-link": "^4.1.1",
@@ -22,7 +16,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "server": "node server/simple-server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -44,11 +37,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.3",
-    "@types/node-fetch": "^2.6.11",
-    "ts-node": "^10.9.2"
   }
 }
+
