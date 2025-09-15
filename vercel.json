@@ -7,25 +7,9 @@
       "config": {
         "distDir": "build"
       }
-    },
-    {
-      "src": "server/simple-server.js",
-      "use": "@vercel/node"
     }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "server/simple-server.js"
-    },
-    {
-      "src": "/test",
-      "dest": "server/simple-server.js"
-    },
-    {
-      "src": "/plaid/(.*)",
-      "dest": "server/simple-server.js"
-    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
