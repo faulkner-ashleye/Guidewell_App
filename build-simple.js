@@ -1,4 +1,30 @@
-<!DOCTYPE html>
+const fs = require('fs');
+const path = require('path');
+
+console.log('🚀 Starting simple build process...');
+
+try {
+  // Create build directory
+  const buildDir = path.join(process.cwd(), 'build');
+  if (!fs.existsSync(buildDir)) {
+    fs.mkdirSync(buildDir, { recursive: true });
+  }
+  
+  // Copy public files
+  const publicDir = path.join(process.cwd(), 'public');
+  if (fs.existsSync(publicDir)) {
+    const publicFiles = fs.readdirSync(publicDir);
+    publicFiles.forEach(file => {
+      const srcPath = path.join(publicDir, file);
+      const destPath = path.join(buildDir, file);
+      if (fs.statSync(srcPath).isFile()) {
+        fs.copyFileSync(srcPath, destPath);
+      }
+    });
+  }
+  
+  // Create a simple, fast-loading index.html
+  const indexHtml = `<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -42,4 +68,14 @@
       </div>
     </div>
   </body>
-</html>
+</html>`;
+  
+  fs.writeFileSync(path.join(buildDir, 'index.html'), indexHtml);
+  
+  console.log('✅ Simple build completed successfully!');
+  console.log('📁 Build directory created with index.html');
+  
+} catch (error) {
+  console.error('❌ Build failed:', error.message);
+  process.exit(1);
+}
