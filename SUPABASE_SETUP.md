@@ -93,3 +93,4 @@ Run the SQL schema in your Supabase dashboard:
 **Your Supabase integration is ready! 🎉**
 
 
+
