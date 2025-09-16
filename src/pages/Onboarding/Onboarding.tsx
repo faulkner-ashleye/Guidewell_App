@@ -30,7 +30,7 @@ export function Onboarding() {
 
   const handleNext = () => {
     if (isLastStep) {
-      navigate('/');
+      navigate('/home');
     } else {
       const nextStep = stepOrder[currentStepIndex + 1];
       setCurrentStep(nextStep);
@@ -45,7 +45,7 @@ export function Onboarding() {
   };
 
   const handleSkip = () => {
-    navigate('/');
+    navigate('/home');
   };
 
   const handleFinish = (finalData: OnboardingState) => {
@@ -56,7 +56,7 @@ export function Onboarding() {
       timeline: finalData.timeline,
       comfortLevel: finalData.comfort
     });
-    navigate('/');
+    navigate('/home');
   };
 
   const renderCurrentStep = () => {
